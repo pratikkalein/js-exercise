@@ -9,8 +9,8 @@ function generatePattern() {
   }
 
   let pattern = "";
-  for (let i = 1; i <= n; i++) {
-    for (let j = 1; j <= i; j++) {
+  for (let rows = 1; rows <= n; rows++) {
+    for (let cols = 1; cols <= rows; cols++) {
       pattern += "*";
     }
     pattern += "\n";

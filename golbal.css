@@ -39,6 +39,7 @@ button {
 input {
   padding: 5px;
   margin-bottom: 10px;
+  font-size: large;
 }
 
 .content {
