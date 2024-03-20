@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/golbal.css">
+    <title>Example 5</title>
+</head>
+
+<body>
+    <main class="container">
+        <nav>
+            <h2>Speed Limits</h2>
+        </nav>
+
+        <div class="content">
+            <h2>Speed Limit Checker</h2>
+            <label for="speedLimit">Speed Limit (km/h):</label>
+            <input type="number" id="speedLimit" name="speedLimit">
+            <br>
+            <label for="vehicleSpeed">Vehicle Speed (km/h):</label>
+            <input type="number" id="vehicleSpeed" name="vehicleSpeed">
+            <br>
+            <button onclick="checkSpeed()">Check Speed</button>
+            <p id="speedResult"></p>
+        </div>
+        <script src="script.js"></script>
+    </main>
+
+</body>
+
+</html>
