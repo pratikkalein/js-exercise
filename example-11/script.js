@@ -1,5 +1,6 @@
 function calculateGrade() {
   const marksInput = document.getElementById("marksInput").value;
+  const gradeResult = document.getElementById("gradeResult");
   const marksArray = marksInput.split(",");
   let sum = 0;
   let count = 0;
@@ -13,21 +14,19 @@ function calculateGrade() {
   }
 
   if (count === 0) {
-    document.getElementById("gradeResult").textContent =
-      "Please enter valid marks.";
+    gradeResult.textContent = "Please enter valid marks.";
     return;
   }
 
   const average = sum / count;
   let grade;
 
-  if (average >= 90) grade = "A";
-  else if (average >= 80) grade = "B";
-  else if (average >= 70) grade = "C";
-  else if (average >= 60) grade = "D";
+  if (average >= 90) grade = "A+";
+  else if (average >= 80) grade = "A";
+  else if (average >= 70) grade = "B";
+  else if (average >= 60) grade = "C";
+  else if (average >= 40) grade = "D";
   else grade = "F";
 
-  document.getElementById(
-    "gradeResult"
-  ).textContent = `Average: ${average.toFixed(2)}, Grade: ${grade}`;
+  gradeResult.textContent = `Average: ${average.toFixed(2)}, Grade: ${grade}`;
 }

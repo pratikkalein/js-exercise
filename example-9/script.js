@@ -1,7 +1,7 @@
 function calculateSumOfMultiples() {
-  const start = document.getElementById("start").value;
-  const end = document.getElementById("end").value;
-  const number = document.getElementById("number").value;
+  const start = parseInt(document.getElementById("start").value);
+  const end = parseInt(document.getElementById("end").value);
+  const number = parseInt(document.getElementById("number").value);
   const result = document.getElementById("result");
 
   if (isNaN(start) || isNaN(end) || isNaN(number)) {
@@ -12,7 +12,7 @@ function calculateSumOfMultiples() {
   let sum = 0;
 
   for (let i = start; i <= end; i++) {
-    if (i % number === 0) {
+    if (number % i === 0) {
       sum += i;
     }
   }

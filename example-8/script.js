@@ -1,19 +1,17 @@
 function displayStringProps() {
   const jsonInput = document.getElementById("jsonInput").value;
+  const stringPropsResult = document.getElementById("stringPropsResult");
   try {
     const obj = JSON.parse(jsonInput);
     const stringProps = getObjectStringProperties(obj);
 
-    document.getElementById(
-      "stringPropsResult"
-    ).innerHTML = `<p>String Properties:</p><code><pre>${JSON.stringify(
+    stringPropsResult.innerHTML = `<p>String Properties:</p><code><pre>${JSON.stringify(
       stringProps,
       null,
       2
     )}</pre></code>`;
   } catch (error) {
-    document.getElementById("stringPropsResult").innerText =
-      "Error: Please enter a valid JSON object.";
+    stringPropsResult.innerText = "Error: Please enter a valid JSON object.";
   }
 }
 

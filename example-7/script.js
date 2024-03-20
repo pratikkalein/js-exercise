@@ -25,9 +25,11 @@ function countValues() {
 }
 
 function convertToOriginalType(value) {
+  value = value.toLowerCase();
   if (value === "true") return true;
   if (value === "false") return false;
   if (value === "null") return null;
+  if (value === "nan") return NaN;
   if (value === "undefined") return undefined;
   if (!isNaN(Number(value))) return Number(value);
   return value;
